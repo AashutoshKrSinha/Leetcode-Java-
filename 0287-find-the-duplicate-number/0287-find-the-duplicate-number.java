@@ -4,21 +4,14 @@ import java.util.HashSet;
 public class Solution {
 
     public int findDuplicate(int[] param_1) {
-
-        ArrayList<Integer> arr = new ArrayList<>();
-        for (int num : param_1) {
-            arr.add(num);
-        }
-
+        
         HashSet<Integer> set = new HashSet<>();
 
-        for (int num : arr) {
-            if (set.contains(num)) {
-                return num;   // duplicate found
+        for (int num : param_1) {
+            if (!set.add(num)) {
+                return num;
             }
-            set.add(num);
         }
-
-        return -1; // if no duplicate
+        return -1;
     }
 }
