@@ -7,7 +7,7 @@ class Solution {
             if (map.containsKey(sum)) {
                 return new int[]{map.get(sum), i};
             }
-            map.put(nums[i], i);
+            map.put(nums[i] , i);
         }
         return new int[]{};
     }
