@@ -1,0 +1,31 @@
+class Solution {
+    public int totalFruit(int[] fruits) {
+        int lastFruit = -1;
+        int secondLastFruit = -1;
+
+        int lastFruitCount = 0;
+        int currMax = 0;
+        int ans = 0;
+
+        for (int fruit : fruits) {
+
+            if (fruit == lastFruit || fruit == secondLastFruit) {
+                currMax++;
+            } else {
+                currMax = lastFruitCount + 1;
+            }
+
+            if (fruit == lastFruit) {
+                lastFruitCount++;
+            } else {
+                lastFruitCount = 1;
+                secondLastFruit = lastFruit;
+                lastFruit = fruit;
+            }
+
+            ans = Math.max(ans, currMax);
+        }
+
+        return ans;
+    }
+}
