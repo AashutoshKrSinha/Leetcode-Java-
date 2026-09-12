@@ -4,11 +4,13 @@ class Solution {
             return 0;
         }
         int slow=0;
-        for(int fast=1;fast<nums.length;fast++){
+        int fast=1;
+        while(fast < nums.length){
             if(nums[fast] != nums[slow]){
                 slow++;
                 nums[slow] = nums[fast];
             }
+            fast++;
         }
         return slow+1;
     }
