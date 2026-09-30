@@ -34,6 +34,10 @@ class Solution {
         if (m % 2 == 1){
             return nums3[m / 2];
         }
+        //nums3 length is m so is the array is even find median
+        //mums3 length / 2-1 if 4 / 2 then -1 == 2 but position will be 1 
+        // nums3 length / 2 if 4 then 4 / 2 == 2 so position 2 
+        // 2 + 3 == 5 now 5 / 2.0 then 2.5 opt
         else{
             return (nums3[m / 2 - 1] + nums3 [m / 2]) / 2.0;
         }
