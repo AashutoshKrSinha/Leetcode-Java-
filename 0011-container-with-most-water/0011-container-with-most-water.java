@@ -21,3 +21,24 @@ class Solution {
         return maxarea;
     }
 }
+/* Brute Force 
+        int maxarea = 0;
+
+        for(int right = 0; right < height.length; right++){
+            for(int left = right + 1; left < height.length; left++){
+
+                int width = left - right;
+
+                int minheight = Math.min(height[right] , height[left]);
+
+                int area = width * minheight;
+
+                if (area > maxarea){
+                    maxarea = area;
+                }
+
+            }
+        
+        }
+        return maxarea;
+        */
