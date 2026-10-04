@@ -15,7 +15,7 @@ class Solution {
             if (nums[i] == target){
                 return i;
             }
-                i++;
+            i++;
         }
         return -1;
     }
